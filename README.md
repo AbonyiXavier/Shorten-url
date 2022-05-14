@@ -12,7 +12,7 @@ To obtain a copy of this app download or clone the repository at this [url](http
 
 Postman collection documentation link [url](https://documenter.getpostman.com/view/7775892/UyxjEkah)
 
-Heroku link [url]()
+Heroku link [url](https://shortenurl-api.herokuapp.com)
 
 # Prerequisites
 
