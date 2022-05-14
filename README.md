@@ -6,6 +6,7 @@ A shorten url API. It is built on top of NodeJS and Express. It is higly flexibl
 
 - Create shorten url
 - Get short code
+- Get short code stats
 
 # Getting Started
 

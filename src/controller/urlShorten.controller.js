@@ -118,3 +118,34 @@ export const getShortCode = async (request, response) => {
     });
   }
 };
+
+export const getShortCodeStat = async (request, response) => {
+  try {
+    const { shortCode } = request.params;
+
+    const getCode = await UrlShorten.findOne({ shortCode }).lean();
+
+   if (!getCode) {
+      return response.status(404).json({
+        status: false,
+        error: "Not short code found",
+      });
+    }
+
+    return response.status(200).json({
+      status: true,
+      message: "Fetched successfully",
+      data: {
+        startDate: getCode.startDate,
+        lastSeenDate: getCode.lastSeenDate,
+        redirectCount: getCode.redirectCount,
+      }
+    });
+
+  } catch (error) {
+    return response.status(500).json({
+      status: true,
+      message: "Operation failed",
+    });
+  }
+};
