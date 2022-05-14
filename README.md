@@ -1,5 +1,7 @@
 # Shorten-url
 
+[![Build Status](https://app.travis-ci.com/AbonyiXavier/Shorten-url.svg?branch=main)](https://app.travis-ci.com/AbonyiXavier/Shorten-url)
+
 A shorten url API. It is built on top of NodeJS and Express. It is higly flexible because it provides the following features with opportunity to:
 
 - Create shorten url
