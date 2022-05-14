@@ -32,7 +32,7 @@ You must have
 - Run 'npm install' to install all dependencies
 - Run 'npm run start' to start the application
 
-# Using Chat Messaging App through a restful client
+# Using Shorten url through a restful client
 
 - Open any restful client application initially installed
 - Select the appropriate http method. Either GET, POST
