@@ -7,7 +7,6 @@ import generateShortCode from "../uniqueShortCode/shortCode";
 export const createShortUrl = async (request, response) => {
   let { url, shortCode } = request.body;
 
-  const base = process.env.BASEURl;
   const shortCodeExist = await UrlShorten.findOne({ shortCode }).lean();
 
   if (shortCodeExist) {
@@ -55,10 +54,6 @@ export const createShortUrl = async (request, response) => {
           data: urlData,
         });
       }
-
-      const shortUrl = `${base}/${shortCode}`;
-
-      console.log("shortUrl", shortUrl);
 
       const itemToSave = new UrlShorten({
         url,
@@ -110,8 +105,6 @@ export const getShortCode = async (request, response) => {
         upSert: true,
       }
     );
-    console.log("code", code);
-    console.log("code", code.url);
 
     return response.status(302).json({
       status: true,
@@ -119,7 +112,6 @@ export const getShortCode = async (request, response) => {
     });
 
   } catch (error) {
-    console.log("error", error);
     return response.status(500).json({
       status: true,
       message: "Operation failed",
