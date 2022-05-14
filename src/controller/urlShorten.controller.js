@@ -99,10 +99,10 @@ export const getShortCode = async (request, response) => {
       },
 
       {
-        $set: { $inc: { redirectCount: 1 } } ,
+      $inc: { redirectCount: 1 },
       },
       {
-        upSert: true,
+        new: true,
       }
     );
 
