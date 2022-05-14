@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- "10"
+directories:
+- node_modules
+services:
+  - mongodb
+before_script:
+  - npm install
+script:
+- npm run test
+notifications:
+  email: false
+
+after_success: npm run coverage
