@@ -28,6 +28,12 @@ app.get("/", async (request, response) => {
   });
 });
 
+app.all('*', (request, response) => {
+  response.status(404).json({
+    status: false,
+    error: 'resource not found',
+  });
+});
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, async () => {
@@ -35,3 +41,5 @@ app.listen(PORT, async () => {
 
   await connect();
 });
+
+export default app;
