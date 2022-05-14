@@ -57,7 +57,7 @@ export const createShortUrl = async (request, response) => {
 
       const itemToSave = new UrlShorten({
         url,
-        shortCode,
+        shortCode: shortCode,
       });
 
       const savedItem = await itemToSave.save();

@@ -3,6 +3,6 @@ import { createShortUrl, getShortCode } from "../controller/urlShorten.controlle
 const router = require('express').Router();
 
 router.post('/shorten', createShortUrl);
-router.post('/:shortCode', getShortCode);
+router.get('/:shortCode', getShortCode);
 
 export default router;
