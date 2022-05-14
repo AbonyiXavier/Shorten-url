@@ -24,7 +24,7 @@ app.get("/", async (request, response) => {
   });
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, async () => {
   logger.info(`Server running at: http://localhost:${PORT}`);
