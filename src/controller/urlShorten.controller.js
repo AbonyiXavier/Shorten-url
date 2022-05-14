@@ -95,11 +95,11 @@ export const getShortCode = async (request, response) => {
 
     const code = await UrlShorten.findOneAndUpdate(
       {
-        _id: shortCode._id,
+        _id: getCode._id,
       },
 
       {
-        $set: { redirectCount: { $inc: { redirectCount: 1 } } },
+        $set: { $inc: { redirectCount: 1 } } ,
       },
       {
         upSert: true,
