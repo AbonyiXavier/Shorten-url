@@ -1,0 +1,23 @@
+{
+  "name": "url-shortening",
+  "version": "1.0.0",
+  "description": "Url Shortening",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon -r esm src/index.js"
+  },
+  "author": "AbonyiXavier",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.2",
+    "dotenv": "^16.0.1",
+    "esm": "^3.2.25",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.3",
+    "pino": "^7.11.0",
+    "pino-pretty": "^7.6.1",
+    "randexp": "^0.5.3",
+    "valid-url": "^1.0.9"
+  }
+}
