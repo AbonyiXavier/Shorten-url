@@ -4,7 +4,7 @@
   "description": "Url Shortening",
   "main": "index.js",
   "scripts": {
-    "test": " cross-env NODE_ENV=test nyc --reporter=text --reporter=html mocha --require @babel/register src/test/index.js --timeout 10000 --recursive --exit || true",
+    "test": " cross-env NODE_ENV=test nyc --reporter=text --reporter=html mocha --require @babel/register src --timeout 10000 --recursive --exit || true",
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel ./src --out-dir ./build",
     "build": "npm run clean && npm run build-babel",
@@ -24,6 +24,7 @@
     "dayjs": "^1.11.2",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "express-validator": "^6.14.0",
     "mongoose": "^6.3.3",
     "morgan": "^1.10.0",
     "pino": "^7.11.0",
