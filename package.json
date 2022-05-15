@@ -8,7 +8,9 @@
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel ./src --out-dir ./build",
     "build": "npm run clean && npm run build-babel",
-    "start": "npm run build && node ./build/index.js"
+    "start": "npm run build && node ./build/index.js",
+    "coverage": "npm run test && jest --coverage && cat ./coverage/lcov.info | coveralls"
+
   },
   "author": "AbonyiXavier",
   "license": "ISC",

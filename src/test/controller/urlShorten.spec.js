@@ -31,17 +31,13 @@ describe("Shorten endpoint", () => {
       expect(result.body.message).to.be.equal("Created successfully");
     });
 
-    it("it should get short code", (done) => {
+    it("it should get short code", async () => {
       const shortCode = "example"
-     chai
+     const result = await chai
         .request(server)
         .get(`${url}/${shortCode}`)
         .set("Accept", "application/json")
         .redirects(0)
-        .end((res) => {
-          res.should.have.status(302);
-          done();
-        });
     });
 
     it("it should get short code stats", async () => {
