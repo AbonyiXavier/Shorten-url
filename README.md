@@ -1,4 +1,5 @@
 # Shorten-url
+[![Build Status](https://app.travis-ci.com/AbonyiXavier/Shorten-url.svg?branch=main)](https://app.travis-ci.com/AbonyiXavier/Shorten-url)
 
 [![Coverage Status](https://coveralls.io/repos/github/AbonyiXavier/Shorten-url/badge.svg?branch=main)](https://coveralls.io/github/AbonyiXavier/Shorten-url?branch=main)
 
