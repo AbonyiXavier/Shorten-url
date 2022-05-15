@@ -14,9 +14,7 @@ const data = {
     shortCode: "example"
 }
 
-let shortCode;
-
-describe("Shorten endpoind", () => {
+describe("Shorten endpoint", () => {
     before(async () => {
       await UrlShorten.deleteMany({});
     });
@@ -28,11 +26,32 @@ describe("Shorten endpoind", () => {
         .set("Accept", "application/json")
         .send(data);
         
-        console.log("result", result.body.data.shortCode);
-        shortCode = result.body.data.shortCode
       expect(result.status).to.equal(201);
       expect(result.body.status).to.equal(true);
       expect(result.body.message).to.be.equal("Created successfully");
+    });
+
+    it("it should get short code", (done) => {
+      const shortCode = "example"
+     chai
+        .request(server)
+        .get(`${url}/${shortCode}`)
+        .set("Accept", "application/json")
+        .redirects(0)
+        .end((res) => {
+          res.should.have.status(302);
+          done();
+        });
+    });
+
+    it("it should get short code stats", async () => {
+      const shortCode = data.shortCode;
+      const result = await chai
+        .request(server)
+        .get(`${url}/${shortCode}/stats`)
+        .set("Accept", "application/json")
+        
+      expect(result.status).to.equal(200);
     });
 
   });

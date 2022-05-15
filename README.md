@@ -30,6 +30,7 @@ You must have
 - In the command prompt, cd to the root of the directory you extracted the app into
 - Run 'npm install' to install all dependencies
 - Run 'npm run start' to start the application
+- Run 'npm run test' to see test coverage
 
 # Using Shorten url through a restful client
 

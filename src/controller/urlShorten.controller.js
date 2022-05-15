@@ -25,8 +25,6 @@ export const createShortUrl = async (request, response) => {
       },
     });
   } catch (error) {
-    logger.error(error.message);
-
     if (error.name === "MongoServerError" && error.code === 11000) {
       return response.status(409).json({
         status: false,
