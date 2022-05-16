@@ -4,7 +4,7 @@
   "description": "Url Shortening",
   "main": "index.js",
   "scripts": {
-    "test": " cross-env NODE_ENV=test nyc --reporter=text --reporter=html mocha --require @babel/register src --timeout 10000 --recursive --exit || true",
+    "test": "cross-env NODE_ENV=test nyc mocha --require @babel/register src --timeout 10000 --recursive --exit || true",
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel ./src --out-dir ./build",
     "build": "npm run clean && npm run build-babel",
